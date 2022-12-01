@@ -1,0 +1,197 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+html{
+    height: 100%;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    min-height: 100%;
+    background-image: url('./fondo.jpg');
+    background-size: cover;
+}
+.head1{
+    background-color: rgba(255, 255, 255, 0.418);
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.head2,.head3{
+    min-width: 50px;
+}
+.grid-container > *{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer";
+}
+.header{
+    grid-area: header;
+    background-image: url('./Brochetadecamaron.jpg');
+    background-size: cover;
+    background-position: bottom;
+    height: 400px;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px red;
+    font-size: 3rem;
+    color: rgb(207, 3, 3);
+    text-shadow: 2px 2px rgba(255, 179, 39, 0.856);
+}
+.logo{
+    width: 150px;
+}
+.navbar{
+    grid-area: navbar;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background-color: rgba(255, 68, 0, 0);
+
+}
+
+.uno{
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 5px;
+    width: 120px;
+}
+.uno:hover{
+    background-color: rgba(255, 255, 255, 0.418);
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 5px;
+    width: 110px;    
+}
+.dos{
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 5px;
+    width: 120px;
+}
+.dos:hover{
+    background-color: rgba(255, 255, 255, 0.418);
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 5px;
+    width: 110px;    
+}
+.tres{
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 5px;
+    width: 120px;
+}
+.tres:hover{
+    background-color: rgba(255, 255, 255, 0.418);
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 5px;
+    width: 110px;    
+}
+.cuatro{
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 5px;
+    width: 120px;
+}
+.cuatro:hover{
+    background-color: rgba(255, 255, 255, 0.418);
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 5px;
+    width: 110px;    
+}
+.menu{
+    text-align: left;
+}
+.imgnav{
+    width: 100px;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-image: url('./pargo-rojo-frito.jpg');
+    background-color: rgba(255, 68, 0, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ul{
+    height: 100px;
+}
+.imgaside{
+    width: 80px;
+}
+.main{
+    grid-area: main;
+    background-color: rgba(255, 68, 0, 0);
+    background-image: url('./salmon.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: black;
+}
+p{
+    color: white;
+    text-shadow: 1px 1px rgba(255, 179, 39, 0.856);
+    font-size: 2rem;
+}
+h2{
+    color: white;
+    text-shadow: 1px 1px rgba(255, 179, 39, 0.856);
+    font-size: 3rem;
+}
+.imgmain{
+    width: 30%;
+}
+footer{
+    grid-area: footer;
+    background-color: rgba(255, 68, 0, 0);
+    width:  100%;
+}
+@media(min-width:600px){
+    .grid-container{
+        grid-template:
+        "header header"400px
+        "navbar navbar"130px
+        "sidebar main"auto
+        "footer footer"100px/
+        140px   auto;
+    }
+    .navbar{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+@media(min-width:900px){
+    .grid-container{
+    grid-template: 
+    "header     header  header"     400px
+    "navbar     navbar  navbar"     130px
+    "main       main    sidebar"    auto
+    "footer     footer  footer"     100px/
+    140px   auto;
+    }
+    .navbar{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
